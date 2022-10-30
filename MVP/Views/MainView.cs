@@ -21,18 +21,12 @@ public partial class MainView : Form,IMainView
 
     }
 
-    private void btn_Search_Click(object sender, EventArgs e)
-    {
-        SearchEvent?.Invoke(this,EventArgs.Empty);
-    }
 
-    private void btn_Delete_Click(object sender, EventArgs e)
-    {
-        DeleteEvent?.Invoke(this,EventArgs.Empty);
-    }
+    private void btn_Search_Click(object sender, EventArgs e) => SearchEvent?.Invoke(sender, e);
 
-    private void btn_Add_Click(object sender, EventArgs e)
-    {
-        AddEvent?.Invoke(this,EventArgs.Empty);
-    }
+    private void btn_Add_Click(object sender, EventArgs e) => AddEvent?.Invoke(sender, e);
+
+    private void btn_Update_Click(object sender, EventArgs e) => UpdateEvent.Invoke(sender, e);
+
+    private void btn_Delete_Click(object sender, EventArgs e) => DeleteEvent?.Invoke(sender, e);
 }

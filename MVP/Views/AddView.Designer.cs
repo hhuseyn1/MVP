@@ -77,6 +77,7 @@
             this.btn_Save.TabIndex = 4;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // btn_Cancel
             // 
@@ -102,7 +103,7 @@
             this.Controls.Add(this.txtbox_SaveLastName);
             this.Controls.Add(this.txtbox_SaveFirstName);
             this.Name = "AddView";
-            this.Text = "AddView";
+            this.Text = "Add";
             ((System.ComponentModel.ISupportInitialize)(this.nUpdown_Score)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -12,7 +12,9 @@ namespace MVP
 
             IMainView _view = new MainView();
             IAddView _addview = new AddView();
-            new MainPresenter(_view,_addview);
+            IUpdateView _updateView = new UpdateView();
+            new MainPresenter(_view,_addview,_updateView);
+            new UpdatePresenter(_updateView);
             Application.Run((Form)_view);
         }
     }

@@ -9,7 +9,7 @@
 
         public string FirstName { get => txtbox_SaveFirstName.Text; }
         public string LastName { get => txtbox_SaveLastName.Text; }
-        public DateOnly BirthOfDate { get => DateOnly.Parse(moncal.SelectionStart.ToShortDateString()); }
+        public DateTime BirthOfDate { get =>moncal.SelectionStart; }
         public float Score { get => (float)nUpdown_Score.Value; }
 
         public event EventHandler? SaveEvent;
